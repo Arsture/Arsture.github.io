@@ -182,20 +182,16 @@
       padding: 1.25rem;
       text-align: center;
     }
-    .avatar {
-      width: min(100%, 260px);
+    .profile-photo {
+      width: min(100%, 280px);
       aspect-ratio: 1;
       margin: 0 auto 1rem;
-      display: grid;
-      place-items: center;
+      display: block;
       border-radius: 36px;
-      background:
-        linear-gradient(135deg, rgba(98, 230, 199, 0.95), rgba(154, 184, 255, 0.95)),
-        #62e6c7;
-      color: #06111d;
-      font-size: clamp(3rem, 9vw, 5.6rem);
-      font-weight: 950;
-      letter-spacing: -0.12em;
+      object-fit: cover;
+      object-position: center 18%;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 18px 55px rgba(0, 0, 0, 0.3);
     }
     .avatar-card p { margin: 0; color: var(--muted); }
 
@@ -305,9 +301,9 @@
           <li>Automation</li>
         </ul>
       </div>
-      <aside class="avatar-card" aria-label="Profile avatar">
-        <div class="avatar" role="img" aria-label="Initials avatar for Minseok Kim">MS</div>
-        <p>Profile visual placeholder — real photo can be added later as <code>assets/profile.jpg</code>.</p>
+      <aside class="avatar-card" aria-label="Profile photo">
+        <img class="profile-photo" src="assets/profile.jpg" alt="김민석 profile photo">
+        <p>Profile photo for 김민석 / Minseok Kim.</p>
       </aside>
     </div>
 
@@ -344,7 +340,8 @@
         <li><span class="meta">Waffle Studio · 2021.08</span><br>Frontend Developer using React and TypeScript.</li>
       </ul>
       <div class="cta-row">
-        <a class="button primary" href="https://arsture.notion.site/6031e608967f49e982bd64c5ef4e486c" target="_blank" rel="noopener noreferrer">Read full Notion CV</a>
+        <a class="button primary" href="assets/cv.pdf" target="_blank" rel="noopener noreferrer">Download CV PDF</a>
+        <a class="button" href="https://arsture.notion.site/6031e608967f49e982bd64c5ef4e486c" target="_blank" rel="noopener noreferrer">Read Notion CV</a>
         <a class="button" href="https://github.com/Arsture" target="_blank" rel="noopener noreferrer">GitHub profile</a>
       </div>
     </section>
